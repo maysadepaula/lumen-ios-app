@@ -7,7 +7,12 @@
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 # Xcode build/ \
+\outl0\strokewidth0 \strokec2 # ================== \
+# macOS & Xcode \
+# ================== \
+.DS_Store \
+build/ DerivedData/ \
+xcuserdata/ \
 *.pbxuser \
 !default.pbxuser \
 *.mode1v3 \
@@ -15,18 +20,48 @@
 *.mode2v3 \
 !default.mode2v3 \
 *.perspectivev3 \
-!default.perspectivev3 xcuserdata/ \
+!default.perspectivev3 \
 *.xccheckout \
-*.moved-aside DerivedData/ \
+*.moved-aside \
 *.hmap \
-*.ipa \
-*.app \
+*.ipa *.app \
 *.xcuserstate \
 *.xcworkspace \
 !default.xcworkspace \
 \
-# macOS \
-.DS_Store \
+# ================== \
+# Firebase Project (Cache Local) \
+# ================== \
+.firebase/ \
+firebase-debug.log \
+firebase-debug.*.log* \
+.firebaserc \
 \
-# Cloud Functions (Node.js) \
-functions/node_modules/}
+# ================== #\
+ Cloud Functions & Node.js \
+# ================== \
+# Regra geral para node_modules, onde quer que apare\'e7am node_modules/ \
+# Regra espec\'edfica se ainda existir uma pasta dentro de functions functions/node_modules/ \
+\
+# Logs e arquivos de runtime do Node.js \
+logs \
+*.log \
+npm-debug.log* \
+yarn-debug.log* \
+yarn-error.log* \
+pids \
+*.pid \
+*.seed \
+*.pid.lock \
+lib-cov \
+coverage \
+.nyc_output \
+.grunt \
+build/Release \
+*.tgz \
+.env \
+\
+# ================== \
+# ARQUIVO SECRETO - O MAIS IMPORTANTE \
+# ================== \
+GoogleService-Info.plist}
